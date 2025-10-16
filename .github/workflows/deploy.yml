@@ -11,10 +11,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   deploy:
     environment:
@@ -22,28 +18,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repo
       - uses: actions/checkout@v4
-
-      # 2️⃣ Setup Node.js
       - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      # 3️⃣ Install dependencies
+        with: node-version: 20
       - run: npm install
-
-      # 4️⃣ Build Vite project
       - run: npm run build
-
-      # 5️⃣ Copy CNAME to dist
       - run: cp public/CNAME dist/CNAME
-
-      # 6️⃣ Upload dist folder
       - uses: actions/upload-pages-artifact@v3
         with:
           path: 'dist'
-
-      # 7️⃣ Deploy to GitHub Pages
       - id: deployment
         uses: actions/deploy-pages@v4
