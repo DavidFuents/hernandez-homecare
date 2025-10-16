@@ -2,7 +2,7 @@
   "name": "hernandez-homecare",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://DavidFuents.github.io/hernandez-homecare",
+  "homepage": "https://hernandez-homecare.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
