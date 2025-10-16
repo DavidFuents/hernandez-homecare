@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/hernandez-homecare/", // ✅ must match repo name
+  base: "/hernandez-homecare/", // still needed for GitHub Pages subpath
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
