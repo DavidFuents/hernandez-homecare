@@ -56,26 +56,6 @@ const HeroSlideshow = () => {
       </div>
       
       <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 to-navy-deep/70"></div>
-      
-      {/* Slide indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-gold w-6' : 'bg-white/50'
-            }`}
-            onClick={() => {
-              setNextSlide(index);
-              setIsTransitioning(true);
-              setTimeout(() => {
-                setCurrentSlide(index);
-                setIsTransitioning(false);
-              }, 4000);
-            }}
-          />
-        ))}
-      </div>
     </div>
   );
 };

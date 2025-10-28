@@ -659,17 +659,17 @@ const BookingWizard = () => {
   };
 
   return (
-    <div className="min-h-screen py-8 px-4 pt-32">
+    <div className="min-h-screen py-8 px-4 pt-28 pb-20">
       {/* Progress Bar */}
       {step <= totalSteps && (
-        <div className="max-w-4xl mx-auto mb-12">
+        <div className="max-w-4xl mx-auto mb-8">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-white drop-shadow">Step {step} of {totalSteps}</span>
-            <span className="text-sm text-white drop-shadow">{Math.round((step / totalSteps) * 100)}%</span>
+            <span className="text-sm font-medium text-white drop-shadow-lg">Step {step} of {totalSteps}</span>
+            <span className="text-sm font-medium text-white drop-shadow-lg">{Math.round((step / totalSteps) * 100)}%</span>
           </div>
-          <div className="h-2 bg-muted rounded-full overflow-hidden">
+          <div className="h-2 bg-white/20 rounded-full overflow-hidden backdrop-blur-sm">
             <div
-              className="h-full bg-gold transition-all duration-500 ease-out"
+              className="h-full bg-gold transition-all duration-500 ease-out shadow-lg"
               style={{ width: `${(step / totalSteps) * 100}%` }}
             />
           </div>
@@ -678,11 +678,11 @@ const BookingWizard = () => {
 
       {/* Back Button */}
       {step > 1 && step <= totalSteps && (
-        <div className="max-w-4xl mx-auto mb-8">
+        <div className="max-w-4xl mx-auto mb-6">
           <Button
             variant="ghost"
             onClick={handleBack}
-            className="text-white hover:text-gold bg-white/20 hover:bg-white/30 backdrop-blur-sm"
+            className="text-white hover:text-gold bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20"
           >
             <ChevronLeft className="mr-2 h-5 w-5" />
             Back

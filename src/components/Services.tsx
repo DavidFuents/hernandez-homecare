@@ -1,6 +1,7 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Home, Building2, Sparkles } from 'lucide-react';
+import { Home, Building2, Sparkles, ArrowRight } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -18,9 +19,9 @@ const Services = () => {
     },
     {
       icon: Sparkles,
-      title: 'Specialty Services',
+      title: 'Specialty Cleaning',
       description: 'Specialized cleaning for unique requirements.',
-      features: ['Carpet & Upholstery Cleaning', 'Window Cleaning', 'Pressure Washing', 'Post-Event Cleaning', 'Green Eco-Friendly Options'],
+      features: ['Carpet & Upholstery Cleaning', 'Window Cleaning', 'Pressure Washing', 'Post-Event Cleaning'],
     },
   ];
 
@@ -71,9 +72,10 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-10 md:mt-16">
-          <Button variant="hero" size="lg" className="w-full sm:w-auto text-xl px-10 py-6" asChild>
-            <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
-              Book Your Cleaning Now
+          <Button variant="hero" size="lg" className="group text-sm md:text-base px-5 md:px-6 py-2.5 md:py-3 w-full sm:w-auto" asChild>
+            <a href="/booking">
+              Book Your Cleaning
+              <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
         </div>

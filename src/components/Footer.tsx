@@ -45,25 +45,15 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="sm:col-span-2 md:col-span-1">
             <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Get In Touch</h4>
-            <div className="space-y-2 md:space-y-3 text-sm md:text-base">
-              <div className="flex items-start flex-col">
-                <div className="flex items-center mb-1">
-                  <Phone className="h-4 w-4 mr-2 text-gold flex-shrink-0" />
-                  <span className="text-gray-300">Call us:</span>
-                </div>
-                <a href="tel:(929) 732-4979" className="text-gray-300 hover:text-gold transition-colors ml-6">
-                  (929) 732-4979
-                </a>
-              </div>
-              <div className="flex items-start flex-col">
-                <div className="flex items-center mb-1">
-                  <Mail className="h-4 w-4 mr-2 text-gold flex-shrink-0" />
-                  <span className="text-gray-300">Email us:</span>
-                </div>
-                <a href="mailto:mauricio.hdbnyc@gmail.com" className="text-gray-300 hover:text-gold transition-colors break-all ml-6">
-                  mauricio.hdbnyc@gmail.com
-                </a>
-              </div>
+          <div className="space-y-3 md:space-y-4 text-sm md:text-base">
+              <a href="tel:(929) 732-4979" className="flex items-center text-gray-300 hover:text-gold transition-colors">
+                <Phone className="h-4 w-4 mr-3 text-gold flex-shrink-0" />
+                (929) 732-4979
+              </a>
+              <a href="mailto:mauricio.hdbnyc@gmail.com" className="flex items-center text-gray-300 hover:text-gold transition-colors">
+                <Mail className="h-4 w-4 mr-3 text-gold flex-shrink-0" />
+                mauricio.hdbnyc@gmail.com
+              </a>
             </div>
           </div>
         </div>
