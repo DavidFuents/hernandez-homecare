@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Users, Clock, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import hLogo from '@/assets/h-logo-white.png';
 import HeroSlideshow from './HeroSlideshow';
 
@@ -12,7 +13,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 pt-16 md:pt-24 lg:pt-32 animate-slide-up">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full max-w-2xl ml-80">
+          <div className="w-full max-w-2xl ml-32 lg:ml-48 xl:ml-64">
           {/* Main Heading */}
           <div className="mb-4 md:mb-6">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 leading-[0.95] tracking-tight">
@@ -34,10 +35,10 @@ const Hero = () => {
           {/* Call to Action */}
           <div className="mb-6 md:mb-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <Button variant="hero" size="lg" className="group text-sm md:text-base px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto" asChild>
-              <a href="/booking">
+              <Link to="/booking">
                 Book Your Cleaning
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
             <p className="text-base md:text-lg text-gold font-medium text-center sm:text-left">¡Hablamos Español!</p>
           </div>
